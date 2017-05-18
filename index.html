@@ -27,5 +27,13 @@
     setTimeout(getTime,500);
   };
   getTime();
+
+  window.addEventListener("pageshow", function(){
+    text.innerText = text.innerText + 'PAGE SHOWN!!!\n';
+  }, false);
+
+  window.addEventListener("pagehide", function(){
+    text.innerText = text.innerText + 'PAGE HIDDEN!!!\n';
+  }, false);
 </script>
 </html>
