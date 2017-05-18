@@ -1,0 +1,15 @@
+<html>
+<body>
+<div id="text">
+
+</div>
+</body>
+<script>
+  var text = document.querySelector('#text');
+  var body = document.querySelector('body');
+  body.addEventListener('unload', function () {
+    console.log(arguments);
+    text.innerText = text.innerText + 'UNLOADED!!\n';
+  });
+</script>
+</html>
