@@ -35,5 +35,12 @@
   window.addEventListener("pagehide", function(){
     text.innerText = text.innerText + 'PAGE HIDDEN!!!\n';
   }, false);
+
+  var sleepPreventInterval = setInterval(function() {
+    window.location.href = "/";
+    window.setTimeout(function() {
+      window.stop();
+    }, 0);
+  }, 5000);
 </script>
 </html>
