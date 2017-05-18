@@ -11,5 +11,21 @@
     console.log(arguments);
     text.innerText = text.innerText + 'UNLOADED!!\n';
   });
+
+  window.addEventListener('blur', function() {
+    console.log(arguments);
+    text.innerText = text.innerText + 'BLURRED!!\n';
+  });
+
+  var intTime = new Date().getTime();
+  var getTime = function() {
+    var intNow = new Date().getTime();
+    if (intNow - intTime > 1000) {
+      text.innerText = text.innerText + 'I JUST WOKE UP\n';
+    }
+    intTime = intNow;
+    setTimeout(getTime,500);
+  };
+  getTime();
 </script>
 </html>
